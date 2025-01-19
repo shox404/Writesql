@@ -7,7 +7,7 @@ import { Styles } from "../styles/creators";
 import { constraints, dataTypes } from "../data";
 import { useParams } from "next/navigation";
 import { useWebContext } from "../context/web";
-import { dataType, indexType, valueCatcher } from "../functions";
+import { dataType, indexType } from "../functions";
 
 const { Option } = Select;
 

@@ -19,7 +19,7 @@ export const dataType = (item: Field) => {
 };
 
 const corrector = (name: string) => {
-  let value = name;
+  const value = name;
 
   if (name == "name") return "'name'";
   if (name == "user") return "'user'";
