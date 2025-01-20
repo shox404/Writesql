@@ -25,10 +25,12 @@ export type ContextType = {
   dispatch: React.Dispatch<ActionType>;
 };
 
+export type ItemType = Record<string, any>;
+
 export type Table = {
   name: string;
   fields: Field[];
-  value: any[];
+  value: ItemType[];
 };
 
 export type Field = {

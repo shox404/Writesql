@@ -1,4 +1,4 @@
-import { Field, SelectData, StateType, Table } from "@/app/types";
+import { Field, ItemType, SelectData, StateType, Table } from "@/app/types";
 import { addTextToFile } from "./updateFile";
 import { dataTypes, constraints } from "../data";
 
@@ -43,8 +43,6 @@ const fields = (table: Table) =>
     .join("");
 
 const values = (table: Table) => {
-  type ItemType = Record<string, any>; 
-  
   const data = (item: ItemType): string =>
     table.fields
       .filter((e) => e.name !== "id")
