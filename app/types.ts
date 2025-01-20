@@ -17,7 +17,7 @@ export type StateType = { database: string; tables: Table[] };
 
 export type ActionType = {
   type: "SET_DATABASE" | "CREATE_TABLE" | "ADD_FIELD" | "ADD_DATA";
-  payload?: string | number | object | any[] | any;
+  payload?: string | number | object;
 };
 
 export type ContextType = {
