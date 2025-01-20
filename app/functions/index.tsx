@@ -1,14 +1,20 @@
-import { Field, StateType, Table } from "@/app/types";
+import { Field, SelectData, StateType, Table } from "@/app/types";
 import { addTextToFile } from "./updateFile";
 import { dataTypes, constraints } from "../data";
 
-export const valueCatcher = (list: any[], value: string) => {
-  return list.find((e) => e.value == value).label;
+export const valueCatcher = (
+  list: SelectData[],
+  value: string
+): string | undefined => {
+  const foundItem = list.find((e: SelectData) => e.value === value);
+  return foundItem ? foundItem.label : undefined;
 };
 
-export const indexType = (item: Field) => {
+export const indexType = (item: Field): string => {
   if (item.indexType.length !== 0) {
-    return item.indexType.map((e) => valueCatcher(constraints, e)).join(" ");
+    return item.indexType
+      .map((e) => valueCatcher(constraints, e) || "")
+      .join(" ");
   } else {
     return "";
   }
