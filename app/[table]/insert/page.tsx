@@ -97,7 +97,7 @@ export default function InsertData() {
                   .filter((e: Field) => e.name !== "id")
                   .map(({ name }, index) => (
                     <div key={index}>
-                      <strong>{name}</strong>: {item[name]}
+                      <strong>{name}</strong>: {item[name as keyof typeof item]}
                     </div>
                   ))}
               </List.Item>
