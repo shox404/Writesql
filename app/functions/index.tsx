@@ -43,7 +43,9 @@ const fields = (table: Table) =>
     .join("");
 
 const values = (table: Table) => {
-  const data = (item: any) =>
+  type ItemType = Record<string, any>; 
+  
+  const data = (item: ItemType): string =>
     table.fields
       .filter((e) => e.name !== "id")
       .map((key: Field) => {
