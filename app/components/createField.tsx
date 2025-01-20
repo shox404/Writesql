@@ -23,7 +23,7 @@ export default function CreateField() {
   const [field, setField] = useState<Field>(defaultField);
   const store = useWebContext();
 
-  const handleFieldChange = (name: string, value: any) => {
+  const handleFieldChange = (name: string, value: unknown) => {
     setField((prev) => ({ ...prev, [name]: value }));
   };
 
