@@ -25,7 +25,7 @@ export type ContextType = {
   dispatch: React.Dispatch<ActionType>;
 };
 
-export type ItemType = Record<string, any>;
+export type ItemType = Record<string, string | number | unknown>;
 
 export type Table = {
   name: string;
