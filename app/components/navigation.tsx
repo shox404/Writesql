@@ -13,6 +13,7 @@ export default function Navigation() {
   };
 
   return <NavigationStyle>
+    <AppButton onClick={submit}>Copy Code</AppButton>
     <AppButton onClick={submit}>Download</AppButton>
   </NavigationStyle>;
 }

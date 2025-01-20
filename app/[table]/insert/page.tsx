@@ -91,7 +91,7 @@ export default function InsertData() {
           bordered
           dataSource={[tableData]}
           renderItem={(array) =>
-            array?.value.map((item: Record<string, any>, index: number) => (
+            array?.value.map((item, index: number) => (
               <List.Item className="items" key={index}>
                 {array.fields
                   .filter((e: Field) => e.name !== "id")
