@@ -34,10 +34,8 @@ function reducer(state: StateType, action: ActionType): StateType {
       });
       return { ...state, tables: data };
     case "ADD_DATA":
-      
-      const newTables = state.tables.map((table) => {
+      const newTables = state.tables.map((table: Table) => {
         if (table.name === payload.table) {
-          console.log(table);
           return {
             ...table,
             value: [...table.value, payload.field],

@@ -19,7 +19,7 @@ const defaultField = {
 };
 
 export default function CreateField() {
-  const { table } = useParams();
+  const { table }: { table: string } = useParams();
   const [field, setField] = useState<Field>(defaultField);
   const store = useWebContext();
 

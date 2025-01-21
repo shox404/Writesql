@@ -25,7 +25,8 @@ export default function CreateTable() {
       (table) => table.name === tableName
     );
     if (tableExists) return;
-    store.dispatch({ type: "CREATE_TABLE", payload: tableName });
+    const payload = tableName;
+    store.dispatch({ type: "CREATE_TABLE", payload });
   };
 
   const setDatabase = (e: ChangeEvent<HTMLInputElement>) => {

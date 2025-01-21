@@ -15,10 +15,11 @@ export interface FormProps {
 
 export type StateType = { database: string; tables: Table[] };
 
-export type ActionType = {
-  type: "SET_DATABASE" | "CREATE_TABLE" | "ADD_FIELD" | "ADD_DATA";
-  payload?: string | number | object;
-};
+export type ActionType =
+  | { type: "SET_DATABASE"; payload: string }
+  | { type: "CREATE_TABLE"; payload: string }
+  | { type: "ADD_FIELD"; payload: { field: Field; table: string } }
+  | { type: "ADD_DATA"; payload: { field: Record<string, string | number>|; table: string } }
 
 export type ContextType = {
   state: StateType;
