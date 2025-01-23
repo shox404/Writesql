@@ -19,7 +19,7 @@ export type ActionType =
   | { type: "SET_DATABASE"; payload: string }
   | { type: "CREATE_TABLE"; payload: string }
   | { type: "ADD_FIELD"; payload: { field: Field; table: string } }
-  | { type: "ADD_DATA"; payload: { field: Record<string, string | number>|; table: string } }
+  | { type: "ADD_DATA"; payload: { field: Record<string, string | number>; table: string } }; // Removed the extra pipe.
 
 export type ContextType = {
   state: StateType;
